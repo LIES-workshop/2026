@@ -1,0 +1,14 @@
+{
+  "enabled": false,
+  "sessions": [
+    { "time": "9:00 AM",  "title": "Opening Remarks",        "type": "plenary" },
+    { "time": "9:15 AM",  "title": "Invited Talk 1",         "type": "talk",    "speaker": "TBD" },
+    { "time": "10:15 AM", "title": "Invited Talk 2",         "type": "talk",    "speaker": "TBD" },
+    { "time": "11:15 AM", "title": "Paper Presentations",    "type": "papers" },
+    { "time": "12:00 PM", "title": "Lunch Break",            "type": "break" },
+    { "time": "1:30 PM",  "title": "Poster Session",         "type": "posters" },
+    { "time": "3:00 PM",  "title": "Coffee Break",           "type": "break" },
+    { "time": "3:30 PM",  "title": "Panel Discussion",       "type": "panel" },
+    { "time": "5:00 PM",  "title": "Closing Remarks",        "type": "plenary" }
+  ]
+}

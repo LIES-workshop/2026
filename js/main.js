@@ -20,8 +20,11 @@ async function loadOrganizers() {
       const nameHtml = org.website
         ? `<a href="${org.website}" class="org-card-name" ${EXT_LINK}>${org.name}</a>`
         : `<span class="org-card-name">${org.name}</span>`;
-      const emailHtml = org.email
-        ? `<a href="mailto:${org.email}" class="org-card-email">${org.email}</a>`
+      // Email is stored split across two fields in organizers.json to prevent
+      // simple scrapers from harvesting full addresses from the raw source.
+      // Assembled here at render time so mailto: links still work normally.
+      const emailHtml = (org.email_user && org.email_domain)
+        ? `<a href="mailto:${org.email_user}@${org.email_domain}" class="org-card-email">${org.email_user}@${org.email_domain}</a>`
         : '';
       const iconsHtml = (org.links || []).reduce((html, l) => {
         const icon = ICONS[l.label];
